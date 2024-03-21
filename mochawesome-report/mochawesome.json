@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-21T07:20:06.245Z",
+    "end": "2024-03-21T07:20:23.170Z",
+    "duration": 16925,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2d696a26-88ef-4c3d-a3f3-2cbcd7edcac5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\loginTests.cy.js",
+      "file": "cypress\\e2e\\loginTests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "72a69759-a183-45f7-a78d-b8dd2b0c83ac",
+          "title": "Login Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify user is able to login successfully with valid credentials",
+              "fullTitle": "Login Test Verify user is able to login successfully with valid credentials",
+              "timedOut": null,
+              "duration": 6727,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Visit the OrangeHRM login page\ncy.visit('/login');\n//Enter username and password\n//Use the page object methods for interaction\n_loginPage.LoginPage.getUsernameInput().type('Admin');\n_loginPage.LoginPage.getPasswordInput().type('admin123');\n// Click the login button\n_loginPage.LoginPage.getLoginButton().click();\n// Verify that the login is successful by checking the presence of a dashboard element\n_homePage.HomePage.getDashboardText().should('contain', 'Dashboard');",
+              "err": {},
+              "uuid": "7126d5c5-39c4-459f-baec-620c6c68956e",
+              "parentUUID": "72a69759-a183-45f7-a78d-b8dd2b0c83ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify user is unable to Login with valid username and invalid passowrd",
+              "fullTitle": "Login Test Verify user is unable to Login with valid username and invalid passowrd",
+              "timedOut": null,
+              "duration": 5610,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Visit the OrangeHRM login page\ncy.visit('/login');\n// Enter username and password\n// Use the page object methods for interaction\n_loginPage.LoginPage.getUsernameInput().type('Admin');\n_loginPage.LoginPage.getPasswordInput().type('invalidPassword');\n// Click the login button\n_loginPage.LoginPage.getLoginButton().click();\n// Verify that the login is unsuccessful by checking the validation error message\n_loginPage.LoginPage.getInvalidCredentialsText().should('be.visible');",
+              "err": {},
+              "uuid": "e0005a37-a3ee-4ac5-9797-fbc7812a32d3",
+              "parentUUID": "72a69759-a183-45f7-a78d-b8dd2b0c83ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify user is unable to Login with invalid username and valid passowrd",
+              "fullTitle": "Login Test Verify user is unable to Login with invalid username and valid passowrd",
+              "timedOut": null,
+              "duration": 4461,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Visit the OrangeHRM login page\ncy.visit('/login');\n// Enter username and password\n// Use the page object methods for interaction\n_loginPage.LoginPage.getUsernameInput().type('InvalidUserName');\n_loginPage.LoginPage.getPasswordInput().type('admin123');\n// Click the login button\n_loginPage.LoginPage.getLoginButton().click();\n// Verify that the login is unsuccessful by checking the validation error message\n_loginPage.LoginPage.getInvalidCredentialsText().should('be.visible');",
+              "err": {},
+              "uuid": "19ecd19c-20a0-4eb9-a586-1ee3b5e4dabc",
+              "parentUUID": "72a69759-a183-45f7-a78d-b8dd2b0c83ac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7126d5c5-39c4-459f-baec-620c6c68956e",
+            "e0005a37-a3ee-4ac5-9797-fbc7812a32d3",
+            "19ecd19c-20a0-4eb9-a586-1ee3b5e4dabc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16798,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
