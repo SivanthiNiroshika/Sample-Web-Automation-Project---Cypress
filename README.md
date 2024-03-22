@@ -23,8 +23,13 @@ Use npm run test:report to generate a test report after running tests.
 
 **Project Structure**
 cypress/
+
 fixtures/: Contains sample data fixtures for test data.
+
 e2e/: Contains test files organized by feature or module.
+
 plugins/: Cypress plugins configuration.
+
 support/: Page Objects and Custom commands 
+
 cypress.config.js/: Base URL is given in this file
