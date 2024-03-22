@@ -7,11 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "cy:run:report": "cypress run --reporter mochawesome",
-    "cy:report": "mochawesome-merge cypress/reports/*.json > cypress/reports/report.json && mochawesome-report-generator cypress/reports/report.json"
+    "cy:run:report": "cypress run --reporter mochawesome"
   },
   "keywords": [],
-  "author": "",
+  "author": "M.K.S.Niroshika",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.6.3",
