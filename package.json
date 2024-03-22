@@ -21,7 +21,7 @@
     "mochawesome-report-generator": "^6.2.0"
   },
   "cypress": {
-    "spec": "cypress/e2e/*.spec.js",
+      "spec": "cypress/e2e/**/*.spec.js",
     "reporter": "mochawesome",
     "reporterOptions": {
       "reportDir": "cypress/reports",
