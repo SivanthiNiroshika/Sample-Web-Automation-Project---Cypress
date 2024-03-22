@@ -24,7 +24,7 @@
   {
   "reporter": "mochawesome",
   "reporterOptions": {
-    "reportDir": "cypress/reports", // Specify the directory where HTML reports will be generated
+    "reportDir": "cypress/reports", 
     "overwrite": false,
     "html": true,
     "json": true
